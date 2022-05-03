@@ -151,10 +151,17 @@ Check that everything went well
 hdfs dfsadmin -report
 ```
 
-## Generate Data
+## Generate Data and Queries
 
-Inside the dbgen directory, execute
+Download the TPC-H generation tool from GitHub with the following command
+```
+wget https://github.com/electrum/tpch-dbgen.git
+```
+
+Inside the dbgen repository, execute
+```
 ./dbgen -s SIZE
+```
 
 where SIZE will equal the total dataset size that you prefer.
 
@@ -162,6 +169,11 @@ Move all the data tables in a new folder.
 
 mkdir data/
 mv *.tbl data/
+
+Similarly, the 22 TPC-H queries are generated using the command
+```
+./qgen
+```
 
 ## Insert data into datanodes
 
@@ -179,6 +191,10 @@ Copy data and schema to HDFS
 hdfs dfs -copyFromLocal /path/to/data /user
 hdfs dfs -copyFromLocal /path/to/schema /user
 ```
+
+## Running Spark SQL queries
+
+
 
 
 ### Useful Commands
