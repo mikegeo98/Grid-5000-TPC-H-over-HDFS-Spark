@@ -194,6 +194,13 @@ hdfs dfs -copyFromLocal /path/to/schema /user
 
 ## Running Spark SQL queries
 
+You can run a given query with Spark SQL using spark-submit:
+```
+spark-submit query.py
+```
+Inside the .py file, you can specify a number of Spark paramaters, like the number of Spark executors that will be used, or the # of executor cores inside each executor.
+
+In the TPC_H_Queries folder you can find .py files with SQL queries from the TPC-H benchmark.
 
 
 
