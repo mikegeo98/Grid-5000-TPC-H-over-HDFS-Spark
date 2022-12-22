@@ -155,7 +155,8 @@ hdfs dfsadmin -report
 
 Download the TPC-H generation tool from GitHub with the following command
 ```
-wget https://github.com/electrum/tpch-dbgen.git
+git clone https://github.com/electrum/tpch-dbgen.git
+cd tpch-dbgen
 ```
 
 Inside the dbgen repository, execute
